@@ -5,24 +5,25 @@
 namespace ReconLib {
 
 	Matriz::Matriz(int dimension) {
-		alto = dimension;
-		ancho = dimension;
-		numeros = (int*)malloc(sizeof(int) * ancho * alto);
+		this->alto = dimension;
+		this->ancho = dimension;
+		this->numeros = (int*)malloc(sizeof(int) * ancho * alto);
 		rellenar(-1);
 	}
 
 	Matriz::Matriz(int _ancho, int _alto) {
-		alto = _alto;
-		ancho = _ancho;
+		this->alto = _alto;
+		this->ancho = _ancho;
+		this->numeros = (int*)malloc(sizeof(int) * ancho * alto);
 		rellenar(-1);
 	}
 
 	int Matriz::get(int i, int j) {
-		return numeros[i * ancho + j];
+		return this->numeros[i * ancho + j];
 	}
 
 	void Matriz::set(int i, int j, int valor) {
-		numeros[i * ancho + j] = valor;
+		this->numeros[i * ancho + j] = valor;
 	}
 
 	void Matriz::mostrar()
@@ -37,9 +38,9 @@ namespace ReconLib {
 
 	void Matriz::rellenar(int relleno)
 	{
-		for (int i = 0; i < ancho; i++) {
-			for (int j = 0; j < alto; j++) {
-				numeros[i * ancho + j] = relleno;
+		for (int i = 0; i < this->ancho; i++) {
+			for (int j = 0; j < this->alto; j++) {
+				this->numeros[i * this->ancho + j] = relleno;
 			}
 		}
 	}

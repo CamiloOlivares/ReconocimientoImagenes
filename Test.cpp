@@ -1,8 +1,10 @@
-#include "Reconocimiento/ReconLib.h"
+#include "Rec/ReconLib.h"
+#include <iostream>
 using namespace ReconLib;
 
 int main()
 {
+	std::cout << "hola";
 	Matriz m(3, 3);
 	m.set(0, 0, 1);
 	m.set(0, 1, 2);
