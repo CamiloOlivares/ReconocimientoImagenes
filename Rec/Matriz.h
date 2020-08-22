@@ -1,3 +1,7 @@
+#ifndef Matriz_H
+#define Matriz_H
+
+
 namespace ReconLib {
 
 	class Matriz
@@ -15,3 +19,6 @@ namespace ReconLib {
 
 	};
 }
+
+#endif
+

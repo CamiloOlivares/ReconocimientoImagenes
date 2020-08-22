@@ -1,20 +1,26 @@
-#ifndef ReconLib_H
-#define ReconLib_H
-#pragma once
-
 /* Estructura de los Layers que componen al programa, input layer, convolutional layer
 y polling layer*/
+
+#ifndef Layer_H
+#define Layer_H
 #include <vector>
+#include "Matriz.h"
 
 namespace ReconLib {
 	class Layer {
-		std::vector<std::vector<std::vector<int>>> convolution(int fill_num);
-		std::vector<std::vector<int>> maxpooling(std::vector<std::vector<int>> matrix);
-		std::vector<std::vector<int>> flatten(std::vector<std::vector<std::vector<int>>> vector_matrix);
+	private:
+		
+		
+	public:
+		void setFilters();
+		std::vector<Matriz> filters;
+		std::vector<Matriz> convolution(int fill_num, Matriz m);
+		Matriz maxpooling(std::vector<std::vector<int>> matrix);
+		std::vector<std::vector<int>> flatten(std::vector<Matriz> vector_matrix);
 		int ReLu(int ReLu);
-		std::vector<std::vector<int>> optimize(int label_num,std::vector<std::vector<int>> matrix,int ages);
+		Matriz optimize(int label_num,Matriz matrix,int ages);
+		
 	};
 }
-
 
 #endif
