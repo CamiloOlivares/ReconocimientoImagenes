@@ -28,8 +28,8 @@ namespace ReconLib {
 
 	void Matriz::mostrar()
 	{
-		for (int i = 0; i < ancho; i++) {
-			for (int j = 0; j < alto; j++) {
+		for (int i = 0; i < alto; i++) {
+			for (int j = 0; j < ancho; j++) {
 				std::cout << get(i, j) << " ";
 			}
 			std::cout << "\n";
@@ -38,8 +38,8 @@ namespace ReconLib {
 
 	void Matriz::rellenar(int relleno)
 	{
-		for (int i = 0; i < this->ancho; i++) {
-			for (int j = 0; j < this->alto; j++) {
+		for (int i = 0; i < this->alto; i++) {
+			for (int j = 0; j < this->ancho; j++) {
 				this->numeros[i * this->ancho + j] = relleno;
 			}
 		}

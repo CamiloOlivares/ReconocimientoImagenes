@@ -15,9 +15,9 @@ namespace ReconLib {
 		void setFilters();
 		std::vector<Matriz> filters;
 		std::vector<Matriz> convolution(int fill_num, Matriz m);
-		Matriz maxpooling(std::vector<std::vector<int>> matrix);
+		Matriz maxpooling(Matriz matrix);
 		std::vector<std::vector<int>> flatten(std::vector<Matriz> vector_matrix);
-		int ReLu(int ReLu);
+		int ReLu(int relu);
 		Matriz optimize(int label_num,Matriz matrix,int ages);
 		
 	};
